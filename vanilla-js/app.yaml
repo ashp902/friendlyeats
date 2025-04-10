@@ -1,0 +1,29 @@
+runtime: nodejs18
+instance_class: F1
+env: standard
+
+handlers:
+  - url: /scripts
+    static_dir: scripts
+
+  - url: /styles
+    static_dir: styles
+
+  - url: /images
+    static_dir: images
+
+  - url: /firebase-messaging-sw.js
+    static_files: firebase-messaging-sw.js
+    upload: firebase-messaging-sw.js
+
+  - url: /sw.js
+    static_files: sw.js
+    upload: sw.js
+
+  - url: /
+    static_files: index.html
+    upload: index.html
+
+  - url: /(.*)
+    static_files: \1
+    upload: (.*)

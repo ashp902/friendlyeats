@@ -1,0 +1,7 @@
+env:
+  # Set this with firebase apphosting:secrets:set
+  - variable: GEMINI_API_KEY
+    secret: gemini-api-key
+runConfig:
+  minInstances: 0
+  maxInstances: 2
